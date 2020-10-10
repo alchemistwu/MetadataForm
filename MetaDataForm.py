@@ -4,8 +4,14 @@ from datetime import datetime
 def MetaDataCollection(AttDict):
     """
     Creating a GUI based on the input dictionary "AttDict".
-    If the value for a item is None, the GUI will put a hint "Requiring Inputs" (but it wont)
-    :return:
+
+    If the value for a item is None, the GUI will put a hint "Requiring Inputs" (but it won't reject empty inputs)
+
+    If no modification is conduct for an item,
+    the value for that item will keep the same as the original input dictionary.
+    Otherwise, the data format will be changed to String.
+
+    The keys of the original dictionary will be kept.
     """
 
     class Att():
